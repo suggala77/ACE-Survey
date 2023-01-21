@@ -12,3 +12,5 @@ VSCode, Eclipse, PostMan
 
 ## Demo Video Link
 
+https://youtu.be/A7Iyf8ajjw8
+https://youtube.com/shorts/Uv-V_rikSVA?feature=share
