@@ -4,7 +4,10 @@ This project is used to take survey of employees, using different set of questio
 
 ## Tech Stack
 
-Java 8, Springboot, Angular 15, TypeScript, npm.
+Java 8, Springboot, Angular 15, Angular Material, TypeScript, npm.
+
+http://localhost:4200/ - UI app
+http://localhost:8080  - sprinboot app
 
 ## Tools Used
 
