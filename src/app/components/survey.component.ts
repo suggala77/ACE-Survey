@@ -33,7 +33,7 @@ export class SurveyComponent implements OnInit {
                     title: "What can we do to make your experience more satisfying?",
                     type: "comment",
                 }, {
-                    name: "2",
+                    name: "3",
                     title: "On a scale of zero to ten, how likely are you to recommend our product to a friend or colleague?",
                     type: "rating",
                     rateMin: 0,
@@ -41,13 +41,13 @@ export class SurveyComponent implements OnInit {
                 }],
             }, {
                 elements: [{
-                    name: "3",
+                    name: "4",
                     title: "In your opinion, how could we improve our Work Process?",
                     type: "comment"
                 }],
             }, {
                 elements: [{
-                    name: "4",
+                    name: "5",
                     title: "Please let us know why you had such a disappointing experience with our Work",
                     type: "comment"
                 }],
@@ -59,7 +59,7 @@ export class SurveyComponent implements OnInit {
 
     }
 
-    alertResults(sender: any) {
+    alertResults = (sender: any) => {
         const results = sender.data;
         const list = [];
         for (const key in results) {
@@ -68,7 +68,9 @@ export class SurveyComponent implements OnInit {
                 qAns: results[key]
             });
         }
-        this.http.saveResponse(list);
+        this.http.saveResponse(list).subscribe(res => {
+            
+        });
     }
     
 }
