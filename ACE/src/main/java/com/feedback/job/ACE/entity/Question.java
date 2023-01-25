@@ -1,5 +1,7 @@
 package com.feedback.job.ACE.entity;
 
+import org.springframework.validation.annotation.Validated;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,19 +14,19 @@ import jakarta.persistence.Table;
 public class Question {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
-	@Column(name="q_id")
+	@Column(name="q_id", nullable = true)
 	int qId;
 
 	@Column(name="q_number")
 	int qNumber;
 	
 	@Column(name="q_ans")
-	int qAns;
+	String qAns;
 	
-	@Column(name="q_text")
+	@Column(name="q_text", nullable = true)
 	String qText;
 	
-	@Column(name="user_id")
+	@Column(name="user_id", nullable = true)
 	int userId;
 	
 	
@@ -32,7 +34,7 @@ public class Question {
 	public Question() {
 	}
 
-	public Question(int qNumber, int qAns, String qText, int userId) {
+	public Question(int qNumber, String qAns, String qText, int userId) {
 		
 		this.qNumber = qNumber;
 		this.qAns = qAns;
@@ -49,11 +51,11 @@ public class Question {
 		this.qNumber = qNumber;
 	}
 
-	public int getqAns() {
+	public String getqAns() {
 		return qAns;
 	}
 
-	public void setqAns(int qAns) {
+	public void setqAns(String qAns) {
 		this.qAns = qAns;
 	}
 
